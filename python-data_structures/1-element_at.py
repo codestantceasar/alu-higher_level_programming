@@ -8,7 +8,8 @@ def element_at(my_list, idx):
         idx (int): The index of the element to retrieve.
 
     Returns:
-        int or None: The element at the specified index, or None if index is invalid.
+        int or None: The element at the specified index, or None if index is
+                   invalid.
     """
     if not isinstance(idx, int):
         return None
