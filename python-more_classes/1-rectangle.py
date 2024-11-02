@@ -68,4 +68,3 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         # Store the validated value in a private attribute
         self.__height = value
-
