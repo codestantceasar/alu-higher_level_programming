@@ -1,8 +1,8 @@
-#!/usr/bin/python3
 """
 This module defines a Rectangle class with various methods
 and attributes for handling rectangle properties and behavior.
 """
+
 
 class Rectangle:
     """A class that defines a rectangle."""
@@ -59,7 +59,8 @@ class Rectangle:
         """Return the string representation of the rectangle."""
         if self.width == 0 or self.height == 0:
             return ""
-        return (str(self.print_symbol) * self.width + "\n") * (self.height - 1) + str(self.print_symbol) * self.width
+        return ((str(self.print_symbol) * self.width + "\n") * 
+                (self.height - 1) + str(self.print_symbol) * self.width)
 
     def __repr__(self):
         """Return the formal string representation of the rectangle."""
