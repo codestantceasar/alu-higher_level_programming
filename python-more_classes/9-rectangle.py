@@ -8,7 +8,7 @@ perimeter, and representing the rectangle in string format.
 class Rectangle:
     """
     Represents a rectangle with width and height attributes.
-    
+ 
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
         print_symbol: Symbol used for string representation of the rectangle.
