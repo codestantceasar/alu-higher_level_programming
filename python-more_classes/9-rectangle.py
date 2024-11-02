@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module defines a Rectangle class with various methods
+and attributes for handling rectangle properties and behavior.
+"""
+
 class Rectangle:
     """A class that defines a rectangle."""
     
