@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Rectangle:
     # Public class attributes
     number_of_instances = 0
