@@ -111,6 +111,5 @@ class Rectangle:
         Returns:
             str: A string that can be used with eval() to create a new instance.
         """
-        return "Rectangle({}, {})".format(
-            self.__width, self.__height
-        )
+        return ("Rectangle({}, {})"
+                .format(self.__width, self.__height))
