@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Defines a Rectangle class with attributes and methods for
-calculating area, perimeter, and for representing the rectangle in string format.
+Defines a Rectangle class with attributes and methods for calculating area,
+perimeter, and representing the rectangle in string format.
 """
 
 class Rectangle:
