@@ -4,6 +4,7 @@ Defines a Rectangle class with attributes and methods for calculating area,
 perimeter, and representing the rectangle in string format.
 """
 
+
 class Rectangle:
     """
     Represents a rectangle with width and height attributes.
