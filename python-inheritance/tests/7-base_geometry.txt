@@ -1,0 +1,21 @@
+Test Cases for BaseGeometry.integer_validator()
+
+Test Case 1:
+- Input: name="my_int", value=12
+- Expected Outcome: Passes without exception.
+
+Test Case 2:
+- Input: name="width", value=89
+- Expected Outcome: Passes without exception.
+
+Test Case 3:
+- Input: name="name", value="John"
+- Expected Outcome: Raises TypeError with message "name must be an integer".
+
+Test Case 4:
+- Input: name="age", value=0
+- Expected Outcome: Raises ValueError with message "age must be greater than 0".
+
+Test Case 5:
+- Input: name="distance", value=-4
+- Expected Outcome: Raises ValueError with message "distance must be greater than 0".
