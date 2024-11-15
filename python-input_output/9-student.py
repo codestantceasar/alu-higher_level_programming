@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Student class definition """
 
+
 class Student:
     """ Defines a student with first name, last name, and age """
 
