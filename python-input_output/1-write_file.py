@@ -2,8 +2,7 @@
 """
 1-write_file.py
 
-This module provides a function to write a string to a text file (UTF-8 encoded)
-and returns the number of characters written.
+This module provides a function to write a string to a text file
 
 Functions:
     write_file(filename="", text=""): Writes text to the specified file.
