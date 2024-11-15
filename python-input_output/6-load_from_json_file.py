@@ -35,7 +35,7 @@ def load_from_json_file(filename):
 
     Note:
         - This function assumes the JSON file exists and is properly formatted.
-        - No exception handling for file permissions or invalid JSON format is implemented.
+        - No exception handling for file permissions or invalid JSON format.
     """
     with open(filename, 'r', encoding='utf-8') as f:
         return json.load(f)
