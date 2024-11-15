@@ -26,6 +26,6 @@ class Student:
         return filtered_dict
 
     def reload_from_json(self, json):
-        """ Replaces all attributes of the Student instance with the given dictionary """
+        """ Replaces all attributes of the Student instance with the given. """
         for key, value in json.items():
             setattr(self, key, value)
