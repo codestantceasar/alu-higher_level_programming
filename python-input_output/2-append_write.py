@@ -2,7 +2,7 @@
 """
 2-append_write.py
 
-This module provides a function to append a string to a text file (UTF-8 encoded)
+This module provides a function to append a string to a text file(UTF-8 encod)
 and returns the number of characters added.
 
 Functions:
