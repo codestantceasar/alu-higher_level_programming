@@ -1,8 +1,17 @@
--- A script that creates the table force_name on your MySQL server
--- Query to create a table 
-CREATE TABLE IF NOT EXISTS force_name (
-       id INT,
-       name VARCHAR(256) NOT NULL);
+-- Create the database if it doesn't exist
+CREATE DATABASE IF NOT EXISTS `hbtn_test_db_3`;
+
+-- Select the database
+USE `hbtn_test_db_3`;
+
+-- Drop the table if it exists (optional)
+DROP TABLE IF EXISTS `force_name`;
+
+-- Create the table with proper escaping
+CREATE TABLE `force_name` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(255) NOT NULL
+);
 
 -- Insert data into the table
 INSERT INTO `force_name` (`name`) VALUES
