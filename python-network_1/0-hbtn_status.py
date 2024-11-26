@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 A Python script that fetches https://alu-intranet.hbtn.io/status using urllib
 """
