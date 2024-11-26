@@ -1,17 +1,29 @@
 #!/usr/bin/python3
-"""
-Python script that takes in a URL, sends a request and displays
-the value of the X-Request-Id variable found in the header
-(handling HTTP errors)
-"""
-from urllib import request, error
+"""Sends a request to a URL and displays the body or error code."""
+
+import urllib.request
+import urllib.error
 import sys
 
 
-if __name__ == "__main__":
+def main():
+    """Main function to handle the HTTP request and response."""
+    if len(sys.argv) != 2:
+        print("Usage: ./3-error_code.py <URL>")
+        sys.exit(1)
+    
+    url = sys.argv[1]
+    req = urllib.request.Request(url)
+    
     try:
-        with request.urlopen(sys.argv[1]) as response:
-            body = response.read()
-            print(body.decode('utf-8'))
-    except error.HTTPError as err:
-        print('Error code: {}'.format(err.code))
+        with urllib.request.urlopen(req) as response:
+            body = response.read().decode('utf-8')
+            print(body)
+    except urllib.error.HTTPError as e:
+        print(f"Error code: {e.code}")
+    except urllib.error.URLError as e:
+        print(f"URL Error: {e.reason}")
+
+
+if __name__ == "__main__":
+    main()
