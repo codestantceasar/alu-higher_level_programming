@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-A Python script that fetches http://0.0.0.0:5050/status using urllib
-"""
+# A Python script that fetches http://0.0.0.0:5050/status using urllib
+
 import urllib.request
 
 url = "http://0.0.0.0:5050/status"
