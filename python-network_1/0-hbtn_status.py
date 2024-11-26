@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 """
-A Python script that fetches https://alu-intranet.hbtn.io/status using urllib
+A Python script that fetches http://0.0.0.0:5050/status using urllib
 """
 import urllib.request
 
-url = "https://alu-intranet.hbtn.io/status"
+url = "http://0.0.0.0:5050/status"
 
 with urllib.request.urlopen(url) as response:
     body = response.read()
