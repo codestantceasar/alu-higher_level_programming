@@ -1,5 +1,12 @@
 #!/usr/bin/python3
-"""Sends a request to a URL and displays the body or error code."""
+"""
+Sends a GET request to a URL and displays the body of the response.
+
+If the HTTP status code is >= 400, prints "Error code: <status_code>".
+
+Usage:
+    ./3-error_code.py <URL>
+"""
 
 import urllib.request
 import urllib.error
@@ -7,24 +14,28 @@ import sys
 
 
 def main():
-    """Handle the HTTP request and response."""
-    if len(sys.argv) != 2:
-        print("Usage: ./3-error_code.py <URL>")
-        sys.exit(1)
+    """
+    Handle the HTTP GET request and process the response.
 
+    Args:
+        None
+
+    Returns:
+        None
+
+    Prints:
+        - The body of the response if the status code is 200.
+        - "Error code: <status_code>" if the status code is >= 400.
+    """
     url = sys.argv[1]
     req = urllib.request.Request(url)
 
     try:
         with urllib.request.urlopen(req) as response:
-            # If the request is successful (status code 200)
-            print("Regular request")
+            body = response.read().decode('utf-8')
+            print(body)
     except urllib.error.HTTPError as e:
-        # If an HTTP error occurs, print the error code
         print(f"Error code: {e.code}")
-    except urllib.error.URLError as e:
-        # Handle other URL-related errors (e.g., connection refused)
-        print(f"URL Error: {e.reason}")
 
 
 if __name__ == "__main__":
