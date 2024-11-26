@@ -1,14 +1,10 @@
 #!/usr/bin/python3
-"""
-A Python script that fetches https://alu-intranet.hbtn.io/status using urllib
-"""
 import urllib.request
 
-url = "http://0.0.0.0:5050/status"
-
-with urllib.request.urlopen(url) as response:
-    body = response.read()
-    print("Body response:")
-    print("\t- type: {}".format(type(body)))
-    print("\t- content: {}".format(body))
-    print("\t- utf8 content: {}".format(body.decode('utf-8')))
+if __name__ == "__main__":
+    with urllib.request.urlopen('https://alu-intranet.hbtn.io/status') as response:
+        body = response.read()
+        print("Body response:")
+        print(f"\t- type: {type(body)}")
+        print(f"\t- content: {body}")
+        print(f"\t- utf8 content: {body.decode('utf-8')}")
