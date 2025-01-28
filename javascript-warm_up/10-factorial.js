@@ -1,10 +1,15 @@
 #!/usr/bin/node
-function factorial (n) {
-  if (n === 1 || isNaN(n)) {
+
+// Function to compute factorial recursively
+function factorial(n) {
+  if (isNaN(n) || n <= 1) {
     return 1;
   }
-
   return n * factorial(n - 1);
 }
 
-console.log(factorial(parseInt(process.argv[2])));
+// Retrieve the first argument, cast it to an integer
+const arg = parseInt(process.argv[2]);
+
+// Compute and print the factorial
+console.log(factorial(arg));
