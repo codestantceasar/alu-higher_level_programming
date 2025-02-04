@@ -7,10 +7,9 @@ const characterId = '18';
 request(apiurl, (error, response, body) => {
   if (error) {
     console.error(error);
-   } else {
+  } else {
     const data = JSON.parse(body);
-    const films = data.results;
-    
+    const films = data.results;   
     const count = films.filter(film =>
       film.characters.some(character => character.includes(`/people/${characterId}/`))
     ).length;
