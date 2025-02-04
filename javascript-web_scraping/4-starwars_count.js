@@ -9,7 +9,7 @@ request(apiurl, (error, response, body) => {
     console.error(error);
   } else {
     const data = JSON.parse(body);
-    const films = data.results;   
+    const films = data.results;
     const count = films.filter(film =>
       film.characters.some(character => character.includes(`/people/${characterId}/`))
     ).length;
