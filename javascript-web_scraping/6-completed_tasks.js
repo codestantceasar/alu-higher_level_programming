@@ -1,24 +1,24 @@
-6. How many completed?
-mandatory
-Write a script that computes the number of tasks completed by user id.
+#!/usr/bin/node
+const request = require('request');
 
-The first argument is the API URL: https://jsonplaceholder.typicode.com/todos
-Only print users with completed task
-You must use the module request
-guillaume@ubuntu:~/$ ./6-completed_tasks.js https://jsonplaceholder.typicode.com/todos
-{ '1': 11,
-  '2': 8,
-  '3': 7,
-  '4': 6,
-  '5': 12,
-  '6': 6,
-  '7': 9,
-  '8': 11,
-  '9': 8,
-  '10': 12 }
-guillaume@ubuntu:~/$
-Repo:
+const url = process.argv[2];
 
-GitHub repository: alu-higher_level_programming
-Directory: javascript-web_scraping
-File: 6-completed_tasks.js
+request(url, (error, response, body) => {
+  if (error) {
+    console.error(error);
+  } else {
+    const todos = JSON.parse(body);
+    const completedTasks = {};
+
+    todos.forEach((task) => {
+      if (task.completed) {
+        if (!completedTasks[task.userId]) {
+          completedTasks[task.userId] = 0;
+        }
+        completedTasks[task.userId]++;
+      }
+    });
+
+    console.log(completedTasks);
+  }
+});
